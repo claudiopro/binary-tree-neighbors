@@ -32,6 +32,91 @@ The program will label the tree with the nearest right-hand neighbor as follows:
  O-->O-->null
 ```
 
+## Installation
+
+`npm install binary-tree-neighbors --save`
+
+## Usage
+
+### Example
+
+```
+    0
+   /
+  0
+ /
+0
+
+```
+
+### Code
+
+```js
+
+var traverse = require('binary-tree-neighbors');
+
+var root = {
+  neighbor: null,
+  children: [
+          {
+          children: [
+                          null,
+                          null
+                    ]
+        },
+        null
+      ]
+}
+
+console.log("Before\n");
+
+console.log(JSON.stringify(root));
+
+traverse(root, null);
+
+console.log("After\n");
+
+console.log(JSON.stringify(root));
+
+```
+
+## Output
+
+```
+
+Before
+
+{
+    "children": [
+        {
+            "children": [
+                null,
+                null
+            ]
+        },
+        null
+    ],
+    "neighbor": null
+}
+
+After
+
+{
+    "children": [
+        {
+            "children": [
+                null,
+                null
+            ],
+            "neighbor": null
+        },
+        null
+    ],
+    "neighbor": null
+}
+
+```
+
 # License
 
 [MIT](http://opensource.org/licenses/MIT)
